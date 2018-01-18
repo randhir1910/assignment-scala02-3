@@ -30,8 +30,8 @@ class Operation {
 
     sub match {
       case Nil => true
-      case first :: Nil if availableCheck(list, first) == false => false
-      case first :: tail if availableCheck(list, first) == true => hasSubsequence(list, tail)
+      case first :: Nil if !availableCheck(list, first) => false
+      case first :: tail if availableCheck(list, first) => hasSubsequence(list, tail)
 
     }
   }

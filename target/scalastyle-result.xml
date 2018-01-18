@@ -1,7 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <checkstyle version="5.0">
- <file name="/home/knoldus/IdeaProjects/assignment-scala02-3/src/main/scala/edu/knoldus/Operation.scala">
-  <error column="27" line="33" source="org.scalastyle.scalariform.SimplifyBooleanExpressionChecker" severity="warning" message="Boolean expression can be simplified"/>
-  <error column="28" line="34" source="org.scalastyle.scalariform.SimplifyBooleanExpressionChecker" severity="warning" message="Boolean expression can be simplified"/>
- </file>
-</checkstyle>
+      
+    </checkstyle>

@@ -17,4 +17,5 @@ object Application extends App {
   logger.info(operation.hasSubsequence(List(one, two, three), List(one, two)) + "\n")
   logger.info(operation.concateList(List(one, two, three), List(four, five)) + "\n")
   logger.info(operation.splitList(List(one, two, three, four, five), function, List.empty, List.empty))
+
 }
