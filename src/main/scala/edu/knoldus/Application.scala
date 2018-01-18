@@ -14,6 +14,7 @@ object Application extends App {
   val function = (a: Int) => a % 2 == 0
 
   logger.info(operation.getListLength(List(one, two, three, four)) + "\n")
+  logger.info(operation.hasSubsequence(List(one, two, three), List(three, one)) + "\n")
   logger.info(operation.hasSubsequence(List(one, two, three), List(one, two)) + "\n")
   logger.info(operation.concateList(List(one, two, three), List(four, five)) + "\n")
   logger.info(operation.splitList(List(one, two, three, four, five), function, List.empty, List.empty))

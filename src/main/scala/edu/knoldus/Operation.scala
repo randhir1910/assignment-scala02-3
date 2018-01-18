@@ -8,14 +8,6 @@ class Operation {
 
   }
 
-  def availableCheck[A](list: List[A], value: A): Boolean = {
-
-    list match {
-      case Nil => false
-      case first :: second if first == value => true
-      case first :: second => availableCheck(second, value)
-    }
-  }
 
   def concateList[A](list1: List[A], list2: List[A]): List[A] = {
 
@@ -23,15 +15,22 @@ class Operation {
       case Nil => list1
       case first :: tail => concateList(list1 :+ first, tail)
     }
+  }
 
+  def availableCheck[A](list: List[A], value: A, sub: List[A]): Boolean = {
+    list match {
+      case Nil => false
+      case first :: second if first == value => hasSubsequence(second, sub)
+      case first :: second => availableCheck(second, value, sub)
+    }
   }
 
   def hasSubsequence[A](list: List[A], sub: List[A]): Boolean = {
 
     sub match {
       case Nil => true
-      case first :: Nil if !availableCheck(list, first) => false
-      case first :: tail if availableCheck(list, first) => hasSubsequence(list, tail)
+      case first :: tail if !availableCheck(list, first, tail) => false
+      case first :: tail => availableCheck(list, first, tail)
 
     }
   }
